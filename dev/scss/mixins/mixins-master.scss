@@ -1,0 +1,94 @@
+@mixin button-reset {
+    	outline: none;
+        border: none;
+        padding: 0;     
+        background-color: transparent;   
+}
+
+@mixin button-reset__links {
+        outline: none;
+        border: none;
+        padding: 0;     
+        background-color: transparent;
+        text-transform: uppercase;
+
+        &:after {
+            display: block;
+            content: "";
+            height: 1px;
+            width: 100%;
+            background-color: black;
+        }
+}
+
+
+/* --------------------- Grid Templates ------------------------ */
+
+// Portfolio Page lay outs
+@mixin headergrid {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 600px){
+        grid-template-columns: 1fr;
+    }
+
+
+    .left-col {
+        grid-column: 1;
+    }
+
+    .right-col {
+        grid-column: 2;
+        
+        @media screen and (max-width: 600px){
+            grid-column: 1;
+        }
+    }
+}
+
+@mixin workgrid {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+    @media screen and (max-width: 600px){
+        grid-template-columns: 1fr;
+    }
+}
+
+@mixin articlegrid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 600px){
+        grid-template-columns: 1fr;
+    }
+
+    .center-col {
+        grid-column: 1 / -1;
+    }
+
+    .left-col {
+        grid-column: 1;
+    }
+
+    .right-col {
+        grid-column: 2;
+        
+        @media screen and (max-width: 600px){
+            grid-column: 1;
+        }
+    }
+}
+
+
+
+/* --------------------- ------------------ ------------------------ */
+

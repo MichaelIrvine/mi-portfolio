@@ -1,0 +1,32 @@
+
+
+.wrapper.contact {
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+
+    // grid-template-rows: 1fr 1fr;
+}
+
+
+.contact-page {
+    display: grid;
+    grid-template-columns: 40px 60px 2fr 1fr;
+}
+
+.contact-content {
+    grid-column: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

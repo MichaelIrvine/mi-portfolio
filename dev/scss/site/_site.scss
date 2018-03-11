@@ -1,0 +1,295 @@
+@import "site/contact";
+@import "site/portfolio";
+
+body { 
+    background-color: #FFFFFF; 
+}
+
+.wrapper.landing {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+
+.front-page-container {
+    // Defines where in the main grid it is
+    grid-row: 1;
+    //Nested Grid ---------------------- 
+    display: grid;
+    // grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(10, 1fr);
+
+    background-color: #fcf7ef;
+
+
+    position: fixed;
+    top: 0;
+    z-index: -99;
+
+    @media screen and (max-width: 600px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+    }
+
+}
+
+
+
+
+.name-text {
+    grid-column: 5;
+    grid-row: 5;
+
+    justify-self: end;
+    align-self: end;
+
+    p.logo-landing {
+    font-family: $mi_font_paragraph;
+    font-weight: 300;
+    font-size: 4em;
+    line-height: 1.5;
+
+        &:first-child {
+            // transform: rotate(-90deg);
+            padding: 10px;
+            position: relative;
+            left: -44px;
+        }
+
+    }
+    @media screen and (max-width: 600px) {
+        position: fixed;
+        top: 20px;
+        left: 40px;
+        z-index: 999;
+    }
+
+}
+
+.designer-text {
+    grid-column: 2;
+    grid-row: 4;
+
+    justify-self: end;
+    align-self: start;
+
+
+    p {
+    font: $mi_font_paragraph;
+    font-weight: 300;
+    font-size: 1.3em;
+
+    }
+
+    p.photographer {
+        transform:  rotate(90deg);
+        position: relative;
+        top: 45px;
+        left: 31px;
+    }
+
+    p.designer {
+    position: relative;
+    top: 0px;
+    left: 19px;
+    }
+
+    @media screen and (max-width: 600px){
+            visibility: hidden;       
+    }
+}
+
+
+.front-image__bird {
+    grid-column: 3 / 5;
+    grid-row: 4 / span 3;
+
+    align-self: center;
+    width: 425px;
+    height: auto;
+    z-index: 1;
+
+    &:hover{
+        z-index: 3;
+    }
+
+    @media screen and (max-width: 600px){
+            visibility: hidden;       
+    }
+
+
+    
+}
+
+.front-image__hand {
+    grid-column: 4;
+    grid-row: 4 / span 3;
+    justify-self: center;
+    align-self: center;
+    z-index: 2;
+    width: 325px;
+    height: auto;
+    
+
+    @media screen and (max-width: 600px){
+            visibility: hidden;       
+    }
+    
+}
+
+
+
+.eyeball {
+    grid-column: 3;
+    grid-row: 6;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 70px;
+    height: 70px;
+    border: 0px solid #000000;
+    border-radius: 200px 200px 200px 200px;
+    background-color: rgba($color: #000000, $alpha: 1);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+    z-index: 4;
+    cursor: default;    
+
+        svg {
+            width: 50px;
+            height: 50px;
+            
+
+        path {
+            fill: rgba($color: #FFFFFF, $alpha: 1);
+            stroke: rgba($color: #FFFFFF, $alpha: 1);
+        }
+
+        circle {
+            fill: rgba($color: #FFFFFF, $alpha: 1.0);
+            stroke: rgba($color: #FFFFFF, $alpha: 1.0);
+        }
+
+    }
+
+}
+// -------------------------- Primary Site -----------------
+
+
+
+.primary {
+    margin-top: 100vh;
+    // background-color: #dbdbca;
+    background-color: #FFFFFF;
+    
+    // Defines position in main grid
+    grid-row: 2;
+    // Nested Grid ---------------------- 
+    display: grid;
+    grid-template-columns: 40px 60px 2fr 1fr;
+    overflow-x: hidden;
+
+    @media screen and (max-width: 600px){
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 5vh;
+    }
+}
+
+
+
+
+.logo-container {
+    grid-column: 4;
+
+    position: absolute;
+
+    margin-top: 50px;
+    margin-left: 50px;
+
+    p.logo-primary {
+    font-family: $mi_font_paragraph;
+    font-weight: 200;
+    font-size: 1em;
+
+        &:first-child {
+            transform: rotate(-90deg);
+            padding: 10px;
+            position: relative;
+            left: -37px;
+        }
+
+    }
+
+    @media screen and (max-width: 600px){
+            visibility: hidden;       
+    }
+}
+
+
+.primary-content {
+    grid-column: 3;
+    margin-top: 10vh;
+
+    @media screen and (max-width: 600px){
+        margin: 1vw;
+        grid-column: 1;
+    }
+}
+
+
+
+
+.primary-header {
+    border-top: 1px solid;
+    padding-top: 20px;
+    border-bottom: 1px solid;
+    padding-bottom: 20px;
+
+    font-size: 3em;
+    font-weight: 300;
+
+    @media screen and (max-width: 600px) {
+        font-size: 2em;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+
+}
+
+.primary-para {
+
+
+    font-size: 1em;
+    font-weight: 300;
+
+        @media screen and (max-width: 600px) {
+        font-size: 1.2em;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+    }
+}
+

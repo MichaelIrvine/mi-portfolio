@@ -1,0 +1,1 @@
+jQuery(document).ready(function(o){console.log(o),o(".menu-box-btn").click(function(){o(".menu-box").toggleClass("is-active")}),o(".menu-box-btn_mobile").click(function(){o(".menu-box_mobile").toggleClass("mobile-active")}),o(".menu-box").hasClass("is-active")&&o(".logo-primary").css({"background-color":"white"})});

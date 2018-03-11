@@ -1,0 +1,35 @@
+
+
+/* --------------------- Typography styles ------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $mi_font_header;
+}
+
+p {
+    font-family: $mi_font_paragraph;
+    line-height: 1.5;
+}
+
+
+
+
+/* --------------------- Nav Typography ------------------------ */
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* -------------------------- Font Awesome ----------------------------*/
+

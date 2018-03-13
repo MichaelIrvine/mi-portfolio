@@ -9,7 +9,6 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 50px; 
         justify-content: center;
-        grid-gap: 0;
     }
 }
 
@@ -93,7 +92,10 @@
     padding: 20px;
 }
 
-
+.work-two {
+    @include workgrid;
+    padding: 20px;
+}
 
 
 

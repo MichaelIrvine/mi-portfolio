@@ -170,6 +170,10 @@
 
 .social-media {
 
+    @media screen and (max-width: 600px){
+        display: none;
+    }
+
     margin-top: 100px;
     
     ul {
@@ -180,6 +184,29 @@
             padding: 0 10px;
             font-size: 1.6em;
             opacity: 0.4;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+}
+
+
+.social-mobile {
+
+
+    margin-top: 100px;
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        
+        .fab {
+            padding: 0 10px;
+            font-size: 1.6em;
+            color: rgba(255, 255, 255, 1);
 
             &:hover {
                 opacity: 0.8;

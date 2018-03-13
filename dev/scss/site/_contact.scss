@@ -9,9 +9,10 @@
 
     height: 100vh;
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 700px){
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 50px; 
+        grid-template-rows: auto auto 50px; 
+        grid-gap: 0;
     }
 }
 
@@ -19,9 +20,21 @@
     grid-column: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-top: 6vh;
 
     padding: 40px;
+
+    h1 {
+    font-size: 4em;
+    font-weight: 600;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    }
+
+    @media screen and (max-width: 700px){
+        grid-column: 1;    
+        grid-row: 1;
+    }
 }
 
 .contact-info {
@@ -29,7 +42,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 40px;
+
+
+    p {
+        font-family: $mi_font_links;
+        font-size: 1em;
+        font-style: italic;
+        font-weight: 200;
+        letter-spacing: 1px;
+    }
+
+    a {
+        font-family: $mi_font_links;
+        font-size: 1em;
+        font-style: italic;
+        font-weight: 200;
+        letter-spacing: 1px;
+    }
+
+        @media screen and (max-width: 700px){
+        grid-column: 1;    
+        grid-row: 2;
+    }
 }
+
+
 
 
 

@@ -31,7 +31,7 @@ section {
     //Nested Grid ---------------------- 
     display: grid;
     // grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: repeat(10, auto);
+    grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
 
     background-color: #fcf7ef;
@@ -53,26 +53,19 @@ section {
 
 
 .name-text {
-    grid-column: 5;
+    grid-column: 5 / 7;
     grid-row: 5;
 
-    justify-self: end;
-    align-self: end;
-
-    p.logo-landing {
-    font-family: $mi_font_paragraph;
-    font-weight: 300;
-    font-size: 4em;
-    line-height: 1.5;
-
-        &:first-child {
-            // transform: rotate(-90deg);
-            padding: 10px;
-            position: relative;
-            left: -44px;
-        }
-
+    h1 {
+        font-size: 4em;
+        font-weight: 600;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin: 0;
     }
+
+
     @media screen and (max-width: 600px) {
         position: fixed;
         top: 20px;
@@ -248,7 +241,7 @@ section {
 
 .primary-content {
     grid-column: 3;
-    margin-top: 10vh;
+    margin-top: 15vh;
 
     @media screen and (max-width: 600px){
         margin: 1vw;
@@ -260,13 +253,16 @@ section {
 
 
 .primary-header {
-    border-top: 1px solid;
+
     padding-top: 20px;
     border-bottom: 1px solid;
     padding-bottom: 20px;
 
-    font-size: 3em;
-    font-weight: 300;
+    
+    font-size: 4em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    
 
     @media screen and (max-width: 600px) {
         font-size: 2em;

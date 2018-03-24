@@ -43,6 +43,8 @@
 }
 
 .home-link {
+
+
     grid-column: 1;
     grid-row: 1;
     align-self: start;
@@ -53,18 +55,26 @@
     font-family: $mi_font_paragraph;
     letter-spacing: 1px;
 
+    a {
+
+    color: rgba(255, 255, 255, 1);
+    font-weight: 100;
+    font-family: $mi_font_paragraph;
+    letter-spacing: 2px;
     
         &:hover,
         &:focus {
             background-color: rgba(255, 255, 255, 1);
             color: rgba(0, 0, 0, 1);
         }
+    }
 
     @media screen and (max-width: 600px) {
         align-self: center;
         font-size: 1.7em;
         letter-spacing: 3px;
     }
+
 }
 
 .primary-menu {

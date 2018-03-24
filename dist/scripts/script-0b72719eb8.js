@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e(".menu-box-btn").click(function(){e(".menu-box").toggleClass("is-active")}),e(".menu-box-btn_mobile").click(function(){e(".menu-box_mobile").toggleClass("mobile-active")}),e(".menu-box_mobile").click(function(){e(this).removeClass("mobile-active")})});

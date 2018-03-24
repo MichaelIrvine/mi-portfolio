@@ -8,6 +8,9 @@ jQuery(document).ready(function ($) {
     $('.menu-box-btn_mobile').click(function () {
         $('.menu-box_mobile').toggleClass('mobile-active')
     })
-    
+
+    $('.menu-box_mobile').click(function(){
+        $(this).removeClass('mobile-active')
+    })
     
 });
